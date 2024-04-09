@@ -1,0 +1,9 @@
+export { HomeHero } from "./HomeHero";
+export { HomePartners } from "./HomePartners";
+export { HomeInfo } from "./HomeInfo";
+export { HomeTeamMembers } from "./HomeTeamMembers";
+export { HomeFeaturesMobile } from "./HomeFeaturesMobile";
+export { HomeFeaturesDesktop } from "./HomeFeaturesDesktop";
+export { HomeArtistsWorks } from "./HomeArtistsWorks";
+export { HomeArtists } from "./HomeArtists";
+export { HomeGeneratedArts } from "./HomeGeneratedArts";

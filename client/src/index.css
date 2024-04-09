@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Geom Graphic W03 Regular";
+  src: url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.eot");
+  src:
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b0b8a10e9c97391e66297c8b5398984f.svg#Geom Graphic W03 Regular")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geom Graphic W03 SemiBold";
+  src: url("https://db.onlinewebfonts.com/t/4db4c1b44d77fb4c2ec8c8ca8691a77c.eot");
+  src:
+    url("https://db.onlinewebfonts.com/t/4db4c1b44d77fb4c2ec8c8ca8691a77c.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/4db4c1b44d77fb4c2ec8c8ca8691a77c.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/4db4c1b44d77fb4c2ec8c8ca8691a77c.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/4db4c1b44d77fb4c2ec8c8ca8691a77c.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/4db4c1b44d77fb4c2ec8c8ca8691a77c.svg#Geom Graphic W03 SemiBold")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Geom Graphic W03 Bold";
+  src: url("https://db.onlinewebfonts.com/t/dcd6ec2b9b1dce4fc1d8b56c504404a8.eot");
+  src:
+    url("https://db.onlinewebfonts.com/t/dcd6ec2b9b1dce4fc1d8b56c504404a8.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/dcd6ec2b9b1dce4fc1d8b56c504404a8.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/dcd6ec2b9b1dce4fc1d8b56c504404a8.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/dcd6ec2b9b1dce4fc1d8b56c504404a8.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/dcd6ec2b9b1dce4fc1d8b56c504404a8.svg#Geom Graphic W03 Bold")
+      format("svg");
+}
+
+body {
+  font-family: "Geom Graphic W03 Regular";
+}
+
+/* i implement that scrollbar disable for order form modal */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .modal-scrollbar::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .modal-scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px grey;
+    border-radius: 20px;
+    margin: 13px;
+  }
+
+  .modal-scrollbar {
+    scrollbar-width: 12px;
+  }
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.269);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fca311;
+}
