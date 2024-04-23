@@ -19,6 +19,7 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=ubuntu-s-1vcpu-2gb-sfo3-01@${{ secrets.HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=connect@artoa.io@${{ secrets.HOST }} 'bash -s' << 'EOF'
             cd /root/ArtOaa
             git pull
+          EOF
