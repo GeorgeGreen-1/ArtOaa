@@ -1,3 +1,10 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master # Change this to the branch you want to trigger the deployment from
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
