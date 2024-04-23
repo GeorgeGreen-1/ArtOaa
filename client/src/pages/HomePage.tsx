@@ -11,6 +11,7 @@ import {
 import useWindowSize from "src/hooks/useWindowSize";
 
 export function HomePage() {
+  console.log("Hello World");
   const { width } = useWindowSize();
   return (
     <>
