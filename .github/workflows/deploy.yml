@@ -17,9 +17,13 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy to server
+      # - name: Deploy to server
+      #   run: |
+      #     ssh -o StrictHostKeyChecking=connect@artoa.io@${{ secrets.HOST }} 'bash -s' << 'EOF'
+      #       cd /root/ArtOaa
+      #       git pull
+      #     EOF
+
+           - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=connect@artoa.io@${{ secrets.HOST }} 'bash -s' << 'EOF'
-            cd /root/ArtOaa
-            git pull
-          EOF
+          ssh -o StrictHostKeyChecking=connect@artoa.io <(echo "cd /root/ArtOaa; git pull") ${{ artoa.io }}
