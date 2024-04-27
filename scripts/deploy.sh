@@ -11,4 +11,4 @@ git pull origin master  # Replace 'main' with the name of your branch
 scp -r C:\Users\vusal\OneDrive\Desktop\Artoa root@209.38.132.164:/root/ArtOaa
 
 # Restart your application or server
-ssh user@droplet_ip "sudo systemctl restart artoa.io"  # Replace 'your_application' with the name of your application or server service
+ssh root@209.38.132.164 "sudo systemctl restart artoa.io"  # Replace 'your_application' with the name of your application or server service
