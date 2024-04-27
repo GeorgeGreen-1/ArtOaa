@@ -3,7 +3,7 @@ name: Auto Deploy
 on:
   push:
     branches:
-      - main # Adjust this to match your repository's main branch
+      - master # Adjust this to match your repository's main branch
 
 jobs:
   deploy:
