@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Pull the latest changes from the GitHub repository
-git pull origin main  # Replace 'main' with the name of your branch
+git pull origin master  # Replace 'main' with the name of your branch
 
 # Build your application (if necessary)
 # npm install  # Example command for a Node.js application
