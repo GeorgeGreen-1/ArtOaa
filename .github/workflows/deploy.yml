@@ -1,25 +1,24 @@
-name: Deploy
+name: Auto Deploy
 
 on:
   push:
     branches:
-      - master # Change this to the branch you want to trigger the deployment from
+      - main # Adjust this to match your repository's main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: Set up SSH connection
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Install Dependencies # If applicable
+        run: npm install # Or any other dependency installation command
 
-      - name: Deploy to server
+      - name: Deploy to DigitalOcean
         run: |
-          ssh -o StrictHostKeyChecking=connect@artoa.io@${{ secrets.HOST }} 'bash -s' << 'EOF'
-            cd /root/ArtOaa
-            git pull
-          EOF
+          # Run your deployment script here
+          ./deploy.sh  # Replace with the path to your deployment script
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Pass your SSH private key as an environment variable
