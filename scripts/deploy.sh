@@ -8,7 +8,7 @@ git pull origin master  # Replace 'main' with the name of your branch
 # npm run build  # Example command to build the application
 
 # Copy the updated files to your DigitalOcean droplet using SCP (Secure Copy)
-scp -r C:\Users\vusal\OneDrive\Desktop\Artoa root@209.38.132.164:/root/ArtOaa
+scp -r "C:\Users\vusal\OneDrive\Desktop\Artoa" root@209.38.132.164:/root/ArtOaa
 
 # Restart your application or server
 ssh root@209.38.132.164 "sudo systemctl restart artoa.io"  # Replace 'your_application' with the name of your application or server service
